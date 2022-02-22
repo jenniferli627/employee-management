@@ -1,0 +1,4 @@
+<div *ngFor="let emp of employees" fxLayoutAlign="center">
+  <app-employee [employee]="emp" id='employee-{{emp.id}}}' style="margin: 0.7em" fxFlex="60" (modify)="updEmployee($event)"></app-employee>
+</div>
+

@@ -1,0 +1,47 @@
+<div fxLayout="column">
+  <ng-container *ngIf="deletion else modify">
+    <h1 mat-dialog-title>Update Information</h1>
+
+    <div mat-dialog-content id="delete-employee">
+      <p>Confirm delete {{employee.firstName}} {{employee.lastName}}?</p>
+    </div>
+
+    <mat-dialog-actions fxFlex fxLayoutAlign="center center">
+      <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="modifyEmployee()">DELETE</button>
+      <button mat-button mat-dialog-close>CANCEL</button>
+    </mat-dialog-actions>
+  </ng-container>
+</div>
+
+<ng-template #modify>
+  <h1 mat-dialog-title>Edit Compensation</h1>
+
+  <div mat-dialog-content>
+    <div fxLayout="column">
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput [(ngModel)]="employee.firstName" readonly>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput [(ngModel)]="employee.lastName" readonly>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Position</mat-label>
+        <input matInput [(ngModel)]="employee.position" readonly>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Compensation</mat-label>
+        <input matInput currencyMask [(ngModel)]="employee.compensation">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <mat-dialog-actions fxFlex fxLayoutAlign="center center">
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="modifyEmployee()" id="save">SAVE</button>
+    <button mat-button mat-dialog-close id="cancel-save">CANCEL</button>
+  </mat-dialog-actions>
+</ng-template>

@@ -1,0 +1,32 @@
+<mat-card class="employee">
+
+  <mat-card-header>
+    <mat-card-title>{{employee.firstName}} {{employee.lastName}}</mat-card-title>
+    <mat-card-subtitle><b>ID:</b> {{employee.id}} </mat-card-subtitle>
+    <mat-card-subtitle><b>Job Title: </b>{{employee.position}}</mat-card-subtitle>
+    <mat-card-subtitle><b>Direct Reports: </b>{{this.reportees.length || 0}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content *ngIf="reportees.length > 0">
+    <div fxLayout="column" style="margin-left:1.5em ">
+      <h4>Reportees:</h4>
+
+      <div *ngFor="let item of reportees;" id="reportees">
+        <ng-container>
+          <div fxLayout="row" fxLayoutAlign="center">
+            <div fxFlex>{{item.firstName}} {{item.lastName}}, {{item.position}}</div>
+            
+            <button mat-icon-button (click)="onUpd(item, false)">
+              <mat-icon>edit</mat-icon>
+            </button>
+
+            <button mat-icon-button (click)="onUpd(item, true)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </ng-container>
+      </div>
+
+    </div>
+  </mat-card-content>
+</mat-card>
