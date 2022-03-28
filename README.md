@@ -5,17 +5,6 @@ An [Angular 9](https://angular.io/) employee web application has been created an
 Basic unit and e2e tests have been created.  [Angular Material Design](https://material.angular.io/) and [Flex Layout](https://github.com/angular/flex-layout)
 have been added as dependencies.  Feel free to add or use other dependencies as you see fit.
 
-## Expectations
-- Spend a few hours alone on this. There is no required temporal component to the challenge. You are done when you say you are. We want to see your best efforts. If you need guidance here, 3 to 4 hours is likely sufficient, more experienced candidates may not need that much time. This is your chance to show us what you got.
-- Your solution should **not** be collaborative & should be your own work.
-- Use of Google or other on-line resources to get you over a technical hump is acceptable.
-- **Understand the code you write, you may be asked to explain it.**
-- A complete solution should be the goal, but an **incomplete solution is acceptable**. Code what you know how to code well. 
-- It is highly recommended that you write unit tests and/or e2e tests to thoroughly verify existing and any **added** functionality.
-- The challenge can be sufficiently completed without the use of the **Angular RxJS Library**, but it is recommended. 
-- If you are a Sr. level Candidate, the correct use of the **Angular RxJS Library** library is **REQUIRED** & it is expected that it's use, where appropriate is part & parcel of your solution. If this requirement is unclear to you, please ask your Mindex Talent Acquisition Adviser  for clarification.
-- Ask questions if something isn't clear. The Talent Acquisition Adviser you are working with knows how to reach a Sr. Mindex developer to resolve any questions you may have.
-
 ### Initial setup
 
 Install [Node](https://nodejs.org/en/) version 10.13+.  After installation run `npm install` at the root of this project.
